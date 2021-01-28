@@ -2,11 +2,11 @@
 
 namespace sundev\Backblaze;
 
-use sundev\B2\Client;
 use GuzzleHttp\Psr7;
 use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\Adapter\Polyfill\NotSupportingVisibilityTrait;
 use League\Flysystem\Config;
+use sundev\B2\Client;
 
 class BackblazeAdapter extends AbstractAdapter
 {
