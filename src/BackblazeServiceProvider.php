@@ -5,6 +5,7 @@ namespace sundev\Backblaze;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;
+use sundev\B2\Client;
 
 class BackblazeServiceProvider extends ServiceProvider
 {

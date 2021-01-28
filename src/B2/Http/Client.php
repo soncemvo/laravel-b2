@@ -43,14 +43,9 @@ class Client extends GuzzleClient
             ErrorHandler::handleErrorResponse($response);
         }
 
-        if ($asJson) {
-            return json_decode($response->getBody(), true);
-        }
 
-        if (!$wantsGetContents) {
-            return $response->getBody();
-        }
 
-        return $response->getBody();
+        //return $response->getBody();
+        return $response;
     }
 }

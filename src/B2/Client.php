@@ -783,6 +783,17 @@ class Client
             $fullUri = $this->apiUrl . $uri;
         }
 
-        return $this->client->request($method, $fullUri, $options, $asJson, $wantsGetContents);
+        $response = $this->client->request($method, $fullUri, $options, $asJson, $wantsGetContents);
+
+        if ($asJson) {
+             return json_decode($response->getBody(), true);
+        }
+
+        if (!$wantsGetContents) {
+            return $response->getBody();
+        }
+
+        return $response->getBody();
+
     }
 }
