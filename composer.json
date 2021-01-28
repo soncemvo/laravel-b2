@@ -35,7 +35,8 @@
     },
     "autoload": {
         "psr-4": {
-            "sundev\\Backblaze\\": "src"
+            "sundev\\Backblaze\\": "src",
+            "sundev\\B2\\": "src/B2"
         }
     },
     "minimum-stability": "stable"
