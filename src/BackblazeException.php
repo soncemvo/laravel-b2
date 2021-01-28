@@ -1,6 +1,6 @@
 <?php
 
-namespace bringyourownideas\Backblaze;
+namespace sundev\Backblaze;
 
 class BackblazeException extends \Exception
 {

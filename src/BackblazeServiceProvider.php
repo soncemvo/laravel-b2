@@ -7,7 +7,6 @@ use obregonco\B2\Bucket;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;
-use Mhetreramesh\Flysystem\BackblazeAdapter;
 
 class BackblazeServiceProvider extends ServiceProvider
 {
@@ -27,7 +26,7 @@ class BackblazeServiceProvider extends ServiceProvider
             }
 
             // create a client
-            $client = new Client($config['accountId'], $config['applicationKey']);
+            $client = new Client($config['accountId'], array('applicationKey' => $config['applicationKey']));
 
             // create an new adapter
             $adapter = new BackblazeAdapter($client, $config['bucketName']);
