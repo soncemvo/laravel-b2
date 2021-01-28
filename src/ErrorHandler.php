@@ -1,14 +1,14 @@
 <?php
 
-namespace obregonco\B2;
+namespace sundev\B2;
 
-use obregonco\B2\Exceptions\B2Exception;
-use obregonco\B2\Exceptions\BadJsonException;
-use obregonco\B2\Exceptions\BadValueException;
-use obregonco\B2\Exceptions\BucketAlreadyExistsException;
-use obregonco\B2\Exceptions\BucketNotEmptyException;
-use obregonco\B2\Exceptions\FileNotPresentException;
-use obregonco\B2\Exceptions\NotFoundException;
+use sundev\B2\Exceptions\B2Exception;
+use sundev\B2\Exceptions\BadJsonException;
+use sundev\B2\Exceptions\BadValueException;
+use sundev\B2\Exceptions\BucketAlreadyExistsException;
+use sundev\B2\Exceptions\BucketNotEmptyException;
+use sundev\B2\Exceptions\FileNotPresentException;
+use sundev\B2\Exceptions\NotFoundException;
 use GuzzleHttp\Psr7\Response;
 
 class ErrorHandler

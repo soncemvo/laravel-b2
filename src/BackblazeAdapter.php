@@ -2,7 +2,7 @@
 
 namespace sundev\Backblaze;
 
-use obregonco\B2\Client;
+use sundev\B2\Client;
 use GuzzleHttp\Psr7;
 use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\Adapter\Polyfill\NotSupportingVisibilityTrait;

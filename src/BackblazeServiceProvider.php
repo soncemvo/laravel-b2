@@ -2,8 +2,6 @@
 
 namespace sundev\Backblaze;
 
-use obregonco\B2\Client;
-use obregonco\B2\Bucket;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;

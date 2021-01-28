@@ -1,8 +1,8 @@
 <?php
 
-namespace obregonco\B2\Http;
+namespace sundev\B2\Http;
 
-use obregonco\B2\ErrorHandler;
+use sundev\B2\ErrorHandler;
 use GuzzleHttp\Client as GuzzleClient;
 use Psr\Http\Message\ResponseInterface;
 

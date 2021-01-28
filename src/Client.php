@@ -1,11 +1,11 @@
 <?php
 
-namespace obregonco\B2;
+namespace sundev\B2;
 
-use obregonco\B2\Exceptions\CacheException;
-use obregonco\B2\Exceptions\NotFoundException;
-use obregonco\B2\Exceptions\ValidationException;
-use obregonco\B2\Http\Client as HttpClient;
+use sundev\B2\Exceptions\CacheException;
+use sundev\B2\Exceptions\NotFoundException;
+use sundev\B2\Exceptions\ValidationException;
+use sundev\B2\Http\Client as HttpClient;
 use Illuminate\Cache\CacheManager;
 use Illuminate\Container\Container;
 use Illuminate\Filesystem\Filesystem;
