@@ -1,4 +1,4 @@
-# B2-Backblaze Storage Adapter for Laravel 5+
+# B2-Backblaze Storage Adapter for Laravel 8
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sundev/laravel-b2.svg?style=flat-square)](https://packagist.org/packages/sundev/laravel-b2)
 [![Total Downloads](https://img.shields.io/packagist/dt/sundev/laravel-b2.svg?style=flat-square)](https://packagist.org/packages/sundev/laravel-b2)
@@ -36,11 +36,11 @@ Now just paste in your credentials and bucketname and you're ready to go!
 
 Just use it as you normally would use the Storage facade.
 ```
-\Storage::disk('b2')->put('test.txt', 'test')
+Storage::disk('b2')->put('test.txt', 'test')
 ```
 and
 ```
-\Storage::disk('b2')->get('test.txt')
+Storage::disk('b2')->get('test.txt')
 ```
 
 ## Credits
