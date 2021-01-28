@@ -1,0 +1,43 @@
+{
+    "name": "sundev/laravel-b2",
+    "type": "library",
+    "description": "Backblaze B2 Cloud Storage for Laravel 8. Original by Paul Olthof (@hpolthof) continued by @soncemvo",
+    "keywords": [
+        "laravel",
+        "backup",
+        "B2",
+        "flysystem",
+        "filesystem",
+        "backblaze",
+        "disks"
+    ],
+    "homepage": "https://",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul Olthof",
+            "email": "hpolthof@gmail.com",
+            "homepage": "https://github.com/hpolthof",
+            "role": "Original Developer"
+        },
+        {
+            "name": "SONce",
+            "homepage": "https://sundev.ru/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1|^8.0",
+        "obregonco/backblaze-b2": "*",
+        "league/flysystem": "1.1.3"
+    },
+    "require-dev": {
+            "symfony/thanks": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "sundev\\Backblaze\\": "src"
+        }
+    },
+    "minimum-stability": "stable"
+}
