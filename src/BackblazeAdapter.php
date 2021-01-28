@@ -256,9 +256,9 @@ class BackblazeAdapter extends AbstractAdapter
     {
         $normalized = [
             'type'      => 'file',
-            'path'      => $file->getName(),
+            'path'      => $file->getFileName(),
             'timestamp' => substr($file->getUploadTimestamp(), 0, -3),
-            'size'      => $file->getSize(),
+            'size'      => $file->getContentLength(),
         ];
 
         return $normalized;

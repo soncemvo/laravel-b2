@@ -732,8 +732,9 @@ class Client
      */
     public function authorizeAccount(bool $forceRefresh = false)
     {
+
         $keyId = $this->authorizationValues['keyId'];
-        $applicationKey = $this->authorizationValues['applicationKey']; 
+        $applicationKey = $this->authorizationValues['applicationKey'];
 
         $baseApiUrl = 'https://api.backblazeb2.com';
         $versionPath = '/b2api/v' . $this->version;
@@ -783,7 +784,7 @@ class Client
             $fullUri = $this->apiUrl . $uri;
         }
 
-        $response = $this->client->request($method, $fullUri, $options, $asJson, $wantsGetContents);
+        $response = $this->client->request($method, $fullUri, $options);
 
         if ($asJson) {
              return json_decode($response->getBody(), true);

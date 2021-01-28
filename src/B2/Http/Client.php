@@ -25,7 +25,7 @@ class Client extends GuzzleClient
      * @param bool $asJson
      * @return mixed|string
      */
-    public function request($method, $uri = null, array $options = [], $asJson = true, $wantsGetContents = true): ResponseInterface
+    public function request($method, $uri = null, array $options = []): ResponseInterface
     {
         $response = parent::request($method, $uri, $options);
 
@@ -42,8 +42,6 @@ class Client extends GuzzleClient
         if ($response->getStatusCode() !== 200) {
             ErrorHandler::handleErrorResponse($response);
         }
-
-
 
         //return $response->getBody();
         return $response;

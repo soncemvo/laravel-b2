@@ -2,6 +2,7 @@
 
 namespace sundev\B2;
 
+use Psr\Http\Message\ResponseInterface;
 use sundev\B2\Exceptions\B2Exception;
 use sundev\B2\Exceptions\BadJsonException;
 use sundev\B2\Exceptions\BadValueException;
@@ -9,7 +10,7 @@ use sundev\B2\Exceptions\BucketAlreadyExistsException;
 use sundev\B2\Exceptions\BucketNotEmptyException;
 use sundev\B2\Exceptions\FileNotPresentException;
 use sundev\B2\Exceptions\NotFoundException;
-use GuzzleHttp\Psr7\Response;
+
 
 class ErrorHandler
 {
@@ -22,7 +23,7 @@ class ErrorHandler
         'cannot_delete_non_empty_bucket' => BucketNotEmptyException::class,
     ];
 
-    public static function handleErrorResponse(Response $response)
+    public static function handleErrorResponse(ResponseInterface $response)
     {
         $responseJson = json_decode($response->getBody(), true);
 
