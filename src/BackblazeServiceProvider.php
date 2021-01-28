@@ -5,7 +5,6 @@ namespace sundev\Backblaze;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
 use League\Flysystem\Filesystem;
-use sundev\B2\Client;
 
 class BackblazeServiceProvider extends ServiceProvider
 {
@@ -25,7 +24,7 @@ class BackblazeServiceProvider extends ServiceProvider
             }
 
             // create a client
-            $client = new Client($config['accountId'], array('applicationKey' => $config['applicationKey']));
+            $client = new \sundev\B2\Client($config['accountId'], array('applicationKey' => $config['applicationKey']));
 
             // create an new adapter
             $adapter = new BackblazeAdapter($client, $config['bucketName']);
