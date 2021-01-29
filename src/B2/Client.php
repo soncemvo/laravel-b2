@@ -745,6 +745,7 @@ class Client
 
         $response = $this->cache->remember('B2-SDK-Authorization', $this->authorizationCacheTime,
             function () use ($keyId, $applicationKey, $baseApiUrl, $versionPath) {
+                //backblaze bug fix
                 return $this->request('GET', $baseApiUrl . $versionPath . '/b2_authorize_account', [
                     'auth' => [$keyId, $applicationKey],
                 ]);
@@ -754,6 +755,9 @@ class Client
         $this->apiUrl = $response['apiUrl'] . $versionPath;
         $this->downloadUrl = $response['downloadUrl'];
         $this->recommendedPartSize = $response['recommendedPartSize'];
+
+        //backblaze fix
+        $this->accountId=$response['accountId'];
     }
 
     /**
